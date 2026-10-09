@@ -191,6 +191,18 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .about .txt{display:grid;gap:18px}
 .quote{margin:8px 0 0;padding:20px 24px;border-left:4px solid var(--cta-b);background:var(--mist);border-radius:0 14px 14px 0;font-size:1.12rem;color:var(--navy);font-weight:600}
 
+.about .card .card-label{margin-top:8px;font-size:.75rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--cta-a)}
+.about .sub{margin-top:14px;font-size:1.15rem}
+.impact{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+@media (max-width:700px){.impact{grid-template-columns:1fr}}
+.impact div{padding:18px;border-radius:14px;background:var(--mist);border:1px solid var(--line);display:grid;gap:6px;align-content:start}
+.impact b{color:var(--navy)}
+.impact p{font-size:.94rem}
+.focus{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.focus li{display:grid;gap:2px;padding-left:16px;border-left:3px solid var(--blue)}
+.focus b{color:var(--navy)}
+.focus span{font-size:.96rem}
+.lead-q{margin-top:10px;font-size:1.1rem;font-weight:650;color:var(--navy)}
 /* Bewertungen */
 .reviews .head{margin-bottom:28px}
 .pe-box{display:grid;justify-items:start;gap:18px;min-width:0}
@@ -449,19 +461,43 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     <div class="card">
       <b>Ing. Christian Auer, M.A. LL.M.</b>
       <span>Xperte für Verkauf &amp; Leadership im Wandel</span>
+      <span class="card-label">Mein Background</span>
       <ul>
-        <li>Trainer und Sparringspartner bei LeadingX, dem Institut für Einstellung und bewusste Führung</li>
-        <li>Schwerpunkt: Vertrieb, Akquise und Führung von Vertriebsteams</li>
-        <li>Initiator von SailingX: Leadership- und Teamentwicklung auf dem Segelboot</li>
+        <li>Über 20 Jahre Erfahrung in Vertrieb, Projektmanagement und Führung</li>
+        <li>Führungspositionen in internationalen Industrieunternehmen</li>
+        <li>Ing. für Maschinenbau &amp; Automatisierungstechnik (HTL)</li>
+        <li>B.A. Unternehmensführung &amp; E-Business</li>
+        <li>M.A. Internationales Weinmarketing</li>
+        <li>LL.M. Wirtschaftsrecht</li>
+        <li>IPMA-zertifizierter Projektmanager</li>
+        <li>Trainer bei LeadingX, Initiator von SailingX</li>
       </ul>
     </div>
     </div>
     <div class="txt">
       <div class="eyebrow">Wer hinter dem Angebot steht</div>
-      <h2>Ich verbinde Technik, Recht und Verkauf mit der Frage, was Menschen wirklich antreibt</h2>
-      <p>Als Ingenieur denke ich in Systemen und Prozessen. Mein Wirtschafts- und Rechtsstudium hat mir gezeigt, wie Verträge, Verhandlungen und Entscheidungen zustande kommen. Im Vertrieb habe ich gelernt, dass am Ende nicht das beste Argument gewinnt, sondern die richtige Haltung im Gespräch.</p>
-      <p>Bei LeadingX arbeite ich mit dem Ansatz, der seit 35 Jahren in über 300 Organisationen wirkt: <strong>Einstellung steuert Verhalten.</strong> Ich übertrage ihn auf den Vertrieb, wo er sich direkt in Umsatz, Marge und Abschlussquote zeigt.</p>
-      <p class="quote">„Ich höre zuerst zu, was bei dir los ist, und schaue dann, wo ich helfen kann.“</p>
+      <h2>Ich vereine technisches Verständnis, wirtschaftliches Denken und menschliche Tiefe</h2>
+      <p>Die Welt wird komplexer, und der Wandel hört nicht mehr auf. Methoden und Tools allein reichen da nicht. Es braucht Menschen, die Verantwortung übernehmen und Orientierung geben. Wer heute mit Klarheit, Haltung und Begeisterung führt und verkauft, macht den Unterschied für den Unternehmenserfolg.</p>
+      <p>Ich war über 20 Jahre selbst in Vertrieb und Führung tätig, in internationalen Industrieunternehmen. Die Herausforderungen deines Alltags kenne ich deshalb nicht aus Büchern, sondern aus eigener Erfahrung: Umsatzziele, schwierige Verhandlungen, Projekte unter Zeitdruck und Teams, die mitziehen sollen.</p>
+      <p>In meinen Trainings verbinde ich systemische und neurowissenschaftliche Modelle mit zeitlosen Weisheiten und emotionaler Intelligenz. Ich arbeite klar, inspirierend und ergebnisorientiert.</p>
+      <p class="quote">Haltung entwickeln, Potenziale entfalten, Wirkung steigern.</p>
+
+      <h3 class="sub">Was meine Arbeit bewirkt</h3>
+      <div class="impact">
+        <div><b>Vertriebsteams</b><p>verkaufen nicht nur, sie begeistern mit Freude. Das steigert Umsatz und Kundenbindung nachhaltig.</p></div>
+        <div><b>Führungskräfte</b><p>gewinnen Klarheit über ihre Wirkung und ihr Handeln und werden authentische Vorbilder und Gestalter.</p></div>
+        <div><b>Organisationen</b><p>schaffen ein Klima aus Eigenverantwortung, Zusammenarbeit und Entwicklung, für mehr Leistung und Lebensqualität.</p></div>
+      </div>
+
+      <h3 class="sub">Meine Schwerpunkte</h3>
+      <ul class="focus">
+        <li><b>LeadingX10 Passion for Selling &amp; Service</b><span>Mit der passenden Einstellung aktiv und authentisch verkaufen und Kunden mit freudvoller Dienstleistung begeistern.</span></li>
+        <li><b>V-Navi</b><span>Verkaufen, Verhandeln, Vereinbaren, Verdienen: Menschen begeistern, Widerstände überwinden, Ziele realisieren und nachhaltige Partnerschaften aufbauen.</span></li>
+        <li><b>LeadNAV 360°</b><span>Leadership-Analyse und Optimierung, digital und im Einzelcoaching.</span></li>
+      </ul>
+
+      <p class="lead-q">Du führst ein Unternehmen, ein Team, Kundengespräche oder Projekte? Dann lass uns ein Gespräch führen.</p>
+      <div><a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt unverbindliches Erstgespräch buchen</a></div>
     </div>
   </div>
 </section>
