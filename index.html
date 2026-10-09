@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="icon" type="image/webp" href="img/christian-auer-avatar.webp">
+<meta property="og:title" content="Christian Auer · Xperte für Verkauf & Leadership">
+<meta property="og:description" content="Ich löse die Vertriebsprobleme, die Umsatz und Wachstum ausbremsen. Das Ergebnis: mehr Abschlüsse, ohne mehr Druck.">
+<meta property="og:image" content="https://christianauer.at/img/christian-auer-business.webp">
+<meta property="og:url" content="https://christianauer.at/">
+<link rel="canonical" href="https://christianauer.at/">
+<title>Christian Auer · Xperte für Verkauf &amp; Leadership</title>
+<meta name="description" content="Christian Auer, Xperte für Verkauf & Leadership. Ich löse die Vertriebsprobleme, die Umsatz und Wachstum im Mittelstand ausbremsen.">
+<style>
+/* Layout: LeadingX-Leadpage-Struktur – heller Hero mit X-Wasserzeichen, Wechsel aus Weiß / Nebelblau / Tiefblau, gelb-orange CTA */
+:root{
+  --navy:#082F4C; --deep:#051F33; --ink:#375A70; --muted:#607C90;
+  --blue:#0D72AD; --sea:#086FA0; --green:#0E9F7A;
+  --mist:#F3F8FC; --ice:#E6F1F9; --line:#DCE8F1; --white:#FFFFFF; --on-dark:#D5E6F2;
+  --cta-a:#FFC23D; --cta-b:#F7931E; --warn:#C2410C;
+  --rainbow:linear-gradient(90deg,#108CC3 0%,#0B96A8 22%,#6DB33F 42%,#CFCB03 60%,#FBB50E 78%,#EE5A2F 100%);
+  --shadow:0 1px 2px rgba(8,47,76,.06),0 18px 40px -18px rgba(8,47,76,.22);
+  --font:"Segoe UI","Segoe UI Variable Text",system-ui,-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.65 var(--font);-webkit-font-smoothing:antialiased}
+h1,h2,h3{color:var(--navy);line-height:1.18;text-wrap:balance;margin:0}
+h1{font-size:clamp(2rem,4.6vw,3.35rem);font-weight:800;letter-spacing:-.02em}
+h2{font-size:clamp(1.6rem,3.2vw,2.35rem);font-weight:750;letter-spacing:-.015em}
+h3{font-size:1.18rem;font-weight:700}
+p{margin:0}
+strong{color:var(--navy)}
+a{color:var(--blue)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cta-b);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
+.narrow{max-width:760px}
+.eyebrow{display:flex;align-items:center;gap:12px;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";width:28px;height:3px;border-radius:2px;background:var(--cta-b)}
+.dark .eyebrow{color:var(--cta-a)}
+.sec{padding-block:clamp(64px,9vw,112px)}
+.mist{background:var(--mist)}
+.head{display:grid;gap:16px;margin-bottom:44px;max-width:760px}
+.head p{font-size:1.08rem}
+
+/* Button */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:12px;background:linear-gradient(135deg,var(--cta-a),var(--cta-b));color:var(--deep);font-weight:800;font-size:1.02rem;text-decoration:none;box-shadow:0 10px 24px -10px rgba(247,147,30,.7);transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(247,147,30,.85)}
+.btn svg{width:18px;height:18px}
+.btn-sm{padding:10px 16px;font-size:.88rem;border-radius:10px}
+.cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
+.cta-note{font-size:.9rem;color:var(--muted)}
+
+/* Header */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.top::before{content:"";display:block;height:4px;background:var(--rainbow)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:12px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;min-width:0}
+.mark{flex:none;width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:var(--navy);color:var(--white);font-weight:800;font-size:.95rem;letter-spacing:.02em;position:relative}
+.mark img{width:40px;height:40px;border-radius:50%;object-fit:cover;display:block}
+.mark::after{content:"";position:absolute;inset:-3px;border-radius:50%;background:var(--rainbow);z-index:-1}
+.brand b{display:block;color:var(--navy);font-size:1.02rem;line-height:1.1}
+.brand span{display:block;color:var(--muted);font-size:.78rem;line-height:1.2}
+.nav{display:flex;align-items:center;gap:22px}
+.nav a.l{color:var(--navy);text-decoration:none;font-weight:600;font-size:.92rem}
+.nav a.l:hover{color:var(--blue)}
+@media (max-width:860px){.nav a.l{display:none}}
+@media (max-width:420px){.brand span{display:none}}
+
+/* Hero */
+.hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--white) 0%,var(--white) 55%,var(--mist) 100%);padding-block:clamp(48px,7vw,88px) clamp(56px,8vw,96px)}
+.hero::before{content:"X";position:absolute;right:-4vw;top:-6vw;font-weight:900;font-size:clamp(380px,52vw,760px);line-height:.8;color:var(--navy);opacity:.035;pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(32px,5vw,64px);align-items:center}
+@media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.hero h1{margin-top:18px}
+.hero .result{margin-top:14px;font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:650;color:var(--blue);line-height:1.3}
+.hero .lead{margin-top:22px;font-size:1.1rem;max-width:62ch}
+.proof{display:flex;align-items:center;gap:14px;margin-top:30px;font-size:.92rem}
+.proof-dots{display:flex}
+.proof-dots i{width:34px;height:34px;border-radius:50%;border:2px solid var(--white);margin-left:-8px;display:grid;place-items:center;font-style:normal;font-size:.7rem;font-weight:800;color:var(--white)}
+.proof-dots i:first-child{margin-left:0;background:var(--blue)}
+.proof-dots i:nth-child(2){background:var(--green)}
+.proof-dots i:nth-child(3){background:var(--cta-b)}
+
+.hero-side{position:relative;min-width:0}
+.seal{position:absolute;z-index:2;left:-56px;bottom:96px;line-height:0;filter:drop-shadow(0 10px 18px rgba(8,47,76,.22))}
+.seal:empty,.seal span:empty{display:contents}
+@media (max-width:900px){.seal{left:auto;right:12px;bottom:auto;top:12px;transform:scale(.8);transform-origin:top right}}
+.portrait{background:var(--white);border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
+.portrait .photo{aspect-ratio:4/4.3;max-width:100%;background:linear-gradient(160deg,var(--ice),var(--mist) 60%,var(--white));display:grid;place-items:center;position:relative}
+.portrait .photo{overflow:hidden}
+.portrait .photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 12%}
+.portrait .initials{position:relative;width:46%;aspect-ratio:1;border-radius:50%;background:var(--navy);color:var(--white);display:grid;place-items:center;font-size:clamp(2.6rem,6vw,3.8rem);font-weight:800;letter-spacing:.02em;box-shadow:0 0 0 6px var(--white),0 0 0 10px rgba(13,114,173,.18)}
+.portrait .ph-note{position:absolute;bottom:14px;left:14px;right:14px;text-align:center;font-size:.75rem;color:var(--muted)}
+.portrait .cap{padding:20px 22px;display:grid;gap:4px;border-top:1px solid var(--line)}
+.portrait .cap b{color:var(--navy);font-size:1.1rem}
+.portrait .cap span{font-size:.92rem;color:var(--muted)}
+.stars{display:flex;align-items:center;gap:10px;font-size:.88rem;margin-top:6px}
+.stars em{font-style:normal;color:var(--cta-b);letter-spacing:2px}
+
+/* Empathie */
+.empathy{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,64px);align-items:start}
+@media (max-width:860px){.empathy{grid-template-columns:1fr}}
+.empathy .txt{display:grid;gap:18px}
+.pains{list-style:none;margin:0;padding:26px;display:grid;gap:14px;background:var(--white);border:1px solid var(--line);border-radius:18px;box-shadow:var(--shadow)}
+.pains li{display:grid;grid-template-columns:22px minmax(0,1fr);gap:12px;align-items:start}
+.pains li::before{content:"";width:10px;height:10px;margin-top:9px;border-radius:50%;background:var(--warn);box-shadow:0 0 0 4px rgba(194,65,12,.12)}
+.notalone{margin-top:30px;display:flex;gap:18px;align-items:center;padding:20px 22px;border-radius:16px;background:var(--navy);color:var(--on-dark)}
+.notalone b{font-size:2rem;color:var(--cta-a);line-height:1;flex:none}
+
+/* Trust band */
+.trust{background:var(--navy);color:var(--on-dark);padding-block:44px}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+@media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.stat b{display:block;font-size:clamp(1.8rem,3.4vw,2.4rem);font-weight:800;color:var(--white);line-height:1.1;font-variant-numeric:tabular-nums}
+.stat span{font-size:.92rem}
+.trust .src{margin-top:22px;font-size:.82rem;color:var(--on-dark);opacity:.75}
+.logos{margin-top:26px;padding-top:22px;border-top:1px solid rgba(213,230,242,.18);display:flex;flex-wrap:wrap;gap:10px 28px;align-items:center;font-weight:700;color:var(--white);opacity:.85}
+.logos em{font-weight:400;font-size:.85rem;color:var(--on-dark)}
+
+/* Problem → Lösung */
+.pl-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+@media (max-width:820px){.pl-grid{grid-template-columns:1fr}}
+.pl{background:var(--white);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.pl .p{padding:22px 24px 18px;display:grid;gap:8px;background:var(--mist);border-bottom:1px dashed var(--line)}
+.pl .s{padding:18px 24px 24px;display:grid;gap:8px;align-content:start}
+.tag{display:inline-flex;align-items:center;gap:8px;font-size:.72rem;font-weight:800;letter-spacing:.12em;text-transform:uppercase}
+.tag::before{content:"";width:8px;height:8px;border-radius:50%}
+.tag.prob{color:var(--warn)}.tag.prob::before{background:var(--warn)}
+.tag.sol{color:var(--green)}.tag.sol::before{background:var(--green)}
+.pl .p h3{font-size:1.12rem}
+.pl .s p{font-size:.98rem}
+.pl .res{margin-top:6px;font-size:.9rem;font-weight:650;color:var(--navy)}
+.pl .res::before{content:"→ ";color:var(--green)}
+
+/* Säulen */
+.pillars{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+@media (max-width:900px){.pillars{grid-template-columns:1fr}}
+.pillar{padding:28px 26px;border-radius:18px;background:var(--white);border:1px solid var(--line);display:grid;gap:12px;align-content:start}
+.pillar .ic{width:46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--ice);color:var(--blue)}
+.pillar .ic svg{width:24px;height:24px}
+.pillar.feature{background:var(--navy);border-color:var(--navy);color:var(--on-dark)}
+.pillar.feature h3{color:var(--white)}
+.pillar.feature .ic{background:rgba(255,194,61,.16);color:var(--cta-a)}
+
+/* Stufen */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;counter-reset:st}
+@media (max-width:980px){.steps{grid-template-columns:1fr}}
+.steps li{counter-increment:st;position:relative;padding:22px 20px;border-radius:16px;background:var(--white);border:1px solid var(--line);display:grid;gap:8px;align-content:start}
+.steps li::before{content:counter(st);width:36px;height:36px;border-radius:50%;display:grid;place-items:center;font-weight:800;color:var(--white);background:var(--blue)}
+.steps li:last-child::before{background:linear-gradient(135deg,var(--cta-a),var(--cta-b));color:var(--deep)}
+.steps h3{font-size:1.05rem}
+.steps p{font-size:.94rem}
+.layers{margin-top:20px;display:grid;grid-template-columns:2fr 2fr 1fr;gap:16px;font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.layers span{padding-top:10px;border-top:3px solid var(--line)}
+.layers span:nth-child(1){border-color:var(--blue)}
+.layers span:nth-child(2){border-color:var(--green)}
+.layers span:nth-child(3){border-color:var(--cta-b)}
+@media (max-width:980px){.layers{display:none}}
+
+/* Ergebnisse */
+.outcomes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px 34px}
+@media (max-width:900px){.outcomes{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.outcomes{grid-template-columns:1fr}}
+.oc{display:grid;gap:8px;padding-top:18px;border-top:2px solid var(--line)}
+.oc small{font-weight:800;color:var(--blue);font-size:.82rem;letter-spacing:.08em}
+
+/* Angebote */
+.offers{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+@media (max-width:960px){.offers{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:620px){.offers{grid-template-columns:1fr}}
+.offer{padding:24px;border-radius:16px;background:var(--white);border:1px solid var(--line);display:grid;gap:10px;align-content:start}
+.offer .for{font-size:.78rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+.offer p{font-size:.96rem}
+.offer.start{border:2px solid var(--cta-b);box-shadow:var(--shadow)}
+.offer.start .for{color:var(--cta-b)}
+
+/* Über mich */
+.about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,60px);align-items:start}
+@media (max-width:860px){.about{grid-template-columns:1fr}}
+.about .side{display:grid;min-width:0}
+.about-img{display:block;width:100%;max-width:100%;aspect-ratio:4/3.4;object-fit:cover;object-position:62% 30%;border-radius:20px 20px 0 0}
+.about .card{border-radius:0 0 20px 20px;background:var(--navy);color:var(--on-dark);padding:30px;display:grid;gap:14px}
+.about .card .initials{width:84px;height:84px;border-radius:50%;background:var(--white);color:var(--navy);display:grid;place-items:center;font-size:1.8rem;font-weight:800}
+.about .card b{color:var(--white);font-size:1.25rem}
+.about .card ul{margin:6px 0 0;padding:0;list-style:none;display:grid;gap:10px;font-size:.95rem}
+.about .card li{padding-left:22px;position:relative}
+.about .card li::before{content:"";position:absolute;left:0;top:.55em;width:10px;height:10px;border-radius:3px;background:var(--cta-a)}
+.about .txt{display:grid;gap:18px}
+.quote{margin:8px 0 0;padding:20px 24px;border-left:4px solid var(--cta-b);background:var(--mist);border-radius:0 14px 14px 0;font-size:1.12rem;color:var(--navy);font-weight:600}
+
+/* Bewertungen */
+.reviews .head{margin-bottom:28px}
+.pe-box{display:grid;justify-items:start;gap:18px;min-width:0}
+#pewl{max-width:100%;overflow-x:auto}
+.pe-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;color:var(--blue);text-decoration:none;border-bottom:2px solid var(--line);padding-bottom:2px}
+.pe-link:hover{border-color:var(--blue)}
+.pe-link svg{width:16px;height:16px}
+
+/* Erstgespräch */
+.talk{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:clamp(28px,5vw,60px);align-items:start}
+@media (max-width:860px){.talk{grid-template-columns:1fr}}
+.agenda{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.agenda li{display:grid;grid-template-columns:40px minmax(0,1fr);gap:14px;align-items:start;padding:16px 18px;background:var(--white);border:1px solid var(--line);border-radius:14px}
+.agenda li b{width:40px;height:40px;border-radius:50%;background:var(--ice);color:var(--blue);display:grid;place-items:center;font-size:1rem}
+.contact{margin-top:26px;display:grid;gap:10px;font-size:.98rem}
+.contact .row{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.contact code{font-family:inherit;font-weight:700;color:var(--navy);user-select:all}
+.copy{border:1px solid var(--line);background:var(--white);color:var(--navy);border-radius:8px;padding:5px 10px;font:600 .82rem var(--font);cursor:pointer}
+.copy:hover{border-color:var(--blue)}
+
+/* FAQ */
+.faq{display:grid;gap:12px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:0 22px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;color:var(--navy);display:flex;justify-content:space-between;gap:16px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";flex:none;width:28px;height:28px;border-radius:50%;display:grid;place-items:center;background:var(--ice);color:var(--blue);font-weight:800;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{padding-bottom:20px}
+
+/* Dunkle Sektionen */
+.dark{background:linear-gradient(135deg,#051F33 0%,#063251 50%,#07557F 100%);color:var(--on-dark)}
+.dark h2,.dark h3,.dark strong{color:var(--white)}
+.final{text-align:center}
+.final .wrap{display:grid;justify-items:center;gap:20px}
+.final blockquote{margin:0;max-width:30ch;font-size:clamp(1.5rem,3vw,2.2rem);font-weight:750;color:var(--white);line-height:1.25;text-wrap:balance}
+
+/* Footer */
+.foot{background:var(--deep);color:var(--on-dark);padding-block:30px;font-size:.88rem}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:14px}
+.foot nav{display:flex;flex-wrap:wrap;gap:18px}
+.foot a{color:var(--on-dark);text-decoration:none}
+.foot a:hover{color:var(--white)}
+.foot .disc{flex-basis:100%;opacity:.65;font-size:.8rem}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <a class="brand" href="#start">
+      <span class="mark"><img src="img/christian-auer-avatar.webp" alt="" width="40" height="40"></span>
+      <span><b>Christian Auer</b><span>Xperte für Verkauf &amp; Leadership</span></span>
+    </a>
+    <nav class="nav" aria-label="Hauptnavigation">
+      <a class="l" href="#probleme">Probleme &amp; Lösungen</a>
+      <a class="l" href="#system">Vorgehen</a>
+      <a class="l" href="#angebote">Angebote</a>
+      <a class="l" href="#ueber-mich">Über mich</a>
+      <a class="btn btn-sm" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Erstgespräch buchen</a>
+    </nav>
+  </div>
+</header>
+
+<main id="start">
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="eyebrow">Für Geschäftsführer und Vertriebsverantwortliche</div>
+      <h1>Ich löse die Vertriebsprobleme, die Umsatz und Wachstum ausbremsen.</h1>
+      <p class="result">Das Ergebnis: mehr Abschlüsse, ohne mehr Druck.</p>
+      <p class="lead">Dein Umsatz hängt an wenigen Köpfen, und meistens an deinem. <strong>Ich zeige dir und deinem Vertriebsteam, welche unbewussten Muster euch im Verkaufsgespräch bremsen</strong>, wie ihr Preise selbstbewusst haltet und wie Akquise wieder zur Routine wird statt zur Überwindung. Ich trainiere nicht nur, ich begleite dich danach als Sparringspartner, bis die neuen Abschlüsse in den Zahlen stehen.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt unverbindliches Erstgespräch buchen
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <span class="cta-note">Kostenlos · 30 Minuten · online oder vor Ort</span>
+      </div>
+      <div class="proof">
+        <div class="proof-dots" aria-hidden="true"><i>GF</i><i>VL</i><i>KAM</i></div>
+        <span>Mit dem Erfahrungsschatz von <strong>LeadingX</strong>: über 7.000 Menschen und 300+ Organisationen begleitet</span>
+      </div>
+    </div>
+    <div class="hero-side">
+    <div class="seal">
+      <!-- ProvenExpert Bewertungssiegel -->
+      <span id="provenexpert_circle_widget_nenbw" style="text-decoration:none;"></span><script type="text/javascript" async src="https://www.provenexpert.com/widget/circlewidget.js?s=150&id=nenbw&u=2xwpkDmA1pwZjImphqQp4VmAjpwAlOmZ&l=de-de"></script>
+      <!-- ProvenExpert Bewertungssiegel -->
+    </div>
+    <aside class="portrait" aria-label="Christian Auer">
+      <div class="photo">
+        <img src="img/christian-auer-portrait.webp" alt="Porträt von Christian Auer im dunkelblauen Sakko" width="1000" height="1500">
+      </div>
+      <div class="cap">
+        <b>Ing. Christian Auer, M.A. LL.M.</b>
+        <span>Xperte für Verkauf &amp; Leadership im Wandel · LeadingX</span>
+        <div class="stars"><em aria-hidden="true">★★★★★</em><a href="#bewertungen">Kundenbewertungen auf ProvenExpert</a></div>
+      </div>
+    </aside>
+    </div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap empathy">
+    <div class="txt">
+      <div class="eyebrow">Kommt dir das bekannt vor?</div>
+      <h2>Es liegt nicht daran, dass dein Team nicht verkaufen kann …</h2>
+      <p>Dein Vertrieb weiß, wie das Produkt funktioniert. Er kennt die Kunden, die Preise und die Prozesse. Und trotzdem bleibt der Umsatz hinter dem zurück, was möglich wäre.</p>
+      <p>Der Grund liegt selten im Wissen. Er liegt in der <strong>Einstellung</strong>, mit der jemand zum Telefon greift, ins Preisgespräch geht oder einen Einwand hört. Genau dort setze ich an.</p>
+      <div class="notalone"><b>7.000+</b><span>Menschen haben das LeadingX-Prinzip bereits erlebt. Du bist mit diesen Fragen nicht allein.</span></div>
+    </div>
+    <ul class="pains">
+      <li><span>Neukunden kommen fast nur über dich. Ohne den Chef läuft die Akquise nicht.</span></li>
+      <li><span>Telefonakquise wird geplant, verschoben und am Ende doch nicht gemacht.</span></li>
+      <li><span>Im Preisgespräch wird schnell Rabatt gegeben, statt den Wert zu verkaufen.</span></li>
+      <li><span>Angebote gehen raus, und dann herrscht Funkstille. Niemand fasst konsequent nach.</span></li>
+      <li><span>Die Vertriebsleitung verkauft lieber selbst, statt ihr Team zu führen.</span></li>
+      <li><span>Einkäufer sind besser vorbereitet als je zuvor, und die alten Methoden ziehen nicht mehr.</span></li>
+    </ul>
+  </div>
+</section>
+
+<section class="trust" aria-label="Erfahrung">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>35 Jahre</b><span>Erfahrung in Führung und Einstellung</span></div>
+      <div class="stat"><b>5.000+</b><span>Seminare, Workshops und Coachings</span></div>
+      <div class="stat"><b>300+</b><span>Organisationen, vom Mittelstand bis zum Konzern</span></div>
+      <div class="stat"><b>1</b><span>Sparringspartner, der bis zur Umsetzung bleibt</span></div>
+    </div>
+    <div class="logos"><em>LeadingX vertrauen unter anderem</em> Beiersdorf <span>Sparkasse</span> <span>Raiffeisen</span> <span>BMW</span> <span>Siemens</span> <span>Swarovski</span> <span>Red Bull Media House</span></div>
+    <p class="src">Zahlen und Referenzen: LeadingX – Institut für Einstellung und bewusste Führung, mein Trainings-Institut.</p>
+  </div>
+</section>
+
+<section class="sec mist" id="probleme">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Probleme &amp; Lösungen</div>
+      <h2>Sechs Vertriebsprobleme, die ich mit dir löse</h2>
+      <p>Jedes dieser Probleme kostet dich jeden Monat Umsatz. Hier siehst du, wo ich ansetze und was sich danach in deinem Vertrieb ändert.</p>
+    </div>
+    <div class="pl-grid">
+      <article class="pl">
+        <div class="p"><span class="tag prob">Problem</span><h3>Der Vertrieb hängt am Chef</h3><p>Die wichtigen Kunden, die großen Abschlüsse und die neuen Kontakte laufen über dich. Fällst du aus, steht der Vertrieb.</p></div>
+        <div class="s"><span class="tag sol">Lösung</span><p>Wir übertragen deine Art zu verkaufen in ein System, das dein Team trägt: klare Gesprächsleitfäden, Verantwortlichkeiten und die Haltung, mit der deine Leute selbst Abschlüsse holen.</p><p class="res">Umsatz, der nicht mehr nur an dir hängt</p></div>
+      </article>
+      <article class="pl">
+        <div class="p"><span class="tag prob">Problem</span><h3>Akquise wird aufgeschoben</h3><p>Kaltakquise ist unbeliebt. Der Kalender ist voll, die Pipeline trotzdem leer, und neue Kunden bleiben aus.</p></div>
+        <div class="s"><span class="tag sol">Lösung</span><p>Wir lösen den inneren Widerstand gegen das Anrufen auf und bauen eine feste Akquise-Routine mit Telefon, LinkedIn und Empfehlungen, die sich in den Alltag einfügt.</p><p class="res">Eine Pipeline, die sich wieder regelmäßig füllt</p></div>
+      </article>
+      <article class="pl">
+        <div class="p"><span class="tag prob">Problem</span><h3>Im Preisgespräch wird nachgegeben</h3><p>Sobald der Einkäufer Druck macht, gibt dein Team Rabatt. Die Marge schmilzt, obwohl die Leistung stimmt.</p></div>
+        <div class="s"><span class="tag sol">Lösung</span><p>Dein Team lernt, den Wert zu verkaufen statt den Preis zu verteidigen, und hält in der Verhandlung ruhig stand. Verkaufen, Verhandeln, Vereinbaren, Verdienen.</p><p class="res">Stabile Preise und bessere Deckungsbeiträge</p></div>
+      </article>
+      <article class="pl">
+        <div class="p"><span class="tag prob">Problem</span><h3>Angebote versanden</h3><p>Viele Angebote, wenige Aufträge. Nach dem Versand fehlt der Mut oder die Struktur, um nachzufassen.</p></div>
+        <div class="s"><span class="tag sol">Lösung</span><p>Wir führen ein klares Follow-up-System ein und trainieren Abschlussfragen, die Entscheidungen herbeiführen, ohne aufdringlich zu wirken.</p><p class="res">Eine höhere Abschlussquote pro Angebot</p></div>
+      </article>
+      <article class="pl">
+        <div class="p"><span class="tag prob">Problem</span><h3>Die Vertriebsleitung führt nicht</h3><p>Die beste Verkäuferin wurde zur Vertriebsleiterin befördert und verkauft weiter selbst. Das Team bleibt ohne Führung.</p></div>
+        <div class="s"><span class="tag sol">Lösung</span><p>Ich begleite deine Vertriebsleitung vom Top-Verkäufer zur Führungskraft: Ziele vereinbaren, coachen statt übernehmen, Leistung sichtbar machen.</p><p class="res">Ein Vertriebsteam, das gemeinsam liefert</p></div>
+      </article>
+      <article class="pl">
+        <div class="p"><span class="tag prob">Problem</span><h3>Der Markt hat sich verändert</h3><p>Kunden informieren sich selbst, vergleichen online und kommen spät ins Gespräch. Die alten Verkaufsmethoden greifen nicht mehr.</p></div>
+        <div class="s"><span class="tag sol">Lösung</span><p>Wir richten deinen Vertrieb auf den Kunden von heute aus: beratend statt drückend, sichtbar auf LinkedIn und mit Gesprächen, die echten Mehrwert liefern.</p><p class="res">Ein Vertrieb, der mit dem Wandel wächst</p></div>
+      </article>
+    </div>
+    <div class="cta-row"><a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Welches Problem kostet dich am meisten? Lass uns sprechen</a></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Was du davon hast</div>
+      <h2>Verkaufen aus Klarheit statt aus Druck</h2>
+      <p>Jedem Verkaufsgespräch gehen Gedanken, Gefühle und Erwartungen voraus. Wer sie kennt, verkauft souveräner. Deshalb arbeite ich nicht nur an Techniken, sondern an der Einstellung, aus der dein Team verkauft. Und weil Wissen allein nichts verändert, bleibe ich nach dem Training an deiner Seite.</p>
+    </div>
+    <div class="pillars">
+      <div class="pillar">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+        <h3>Gelassen ins Gespräch</h3>
+        <p>Dein Team erkennt, welche Muster unter Druck entstehen, etwa die Angst vor dem Nein. Es führt Gespräche ruhig und bleibt bei Einwänden souverän.</p>
+      </div>
+      <div class="pillar">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 7h6v6"/></svg></span>
+        <h3>Wert verkaufen, Preis halten</h3>
+        <p>Mit klarer Argumentation, guten Fragen und Verhandlungsstärke werden Abschlüsse größer und Rabatte kleiner.</p>
+      </div>
+      <div class="pillar feature">
+        <span class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+        <h3>Umsetzen, mit Sparringspartner</h3>
+        <p>Ich begleite dich und dein Team proaktiv in der Umsetzung, bis die neuen Routinen im Vertriebsalltag halten und sich in den Zahlen zeigen.</p>
+      </div>
+    </div>
+    <div class="cta-row"><a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt unverbindliches Erstgespräch buchen</a></div>
+  </div>
+</section>
+
+<section class="sec mist" id="system">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Das Vorgehen im Überblick</div>
+      <h2>In fünf Stufen von der Einstellung zum Abschluss</h2>
+      <p>Für alle, die genug haben von Verkaufstrainings, deren Wirkung nach zwei Wochen verpufft.</p>
+    </div>
+    <ol class="steps">
+      <li><h3>Bewusst machen</h3><p>Du erkennst, welche Einstellungen dein Team im Verkauf steuern, wenn es eng wird.</p></li>
+      <li><h3>Trainierbar machen</h3><p>Ihr erlebt, wie sich Haltung im Gespräch gezielt trainieren lässt.</p></li>
+      <li><h3>Verändern</h3><p>Ihr legt ab, was bremst: Angst vor dem Nein, Rabatt-Reflex, Aufschieben.</p></li>
+      <li><h3>Übertragen</h3><p>Ich begleite euch, bis Leitfäden und Routinen im echten Kundenkontakt sitzen.</p></li>
+      <li><h3>Abschließen</h3><p>Die neue Haltung wird zu Abschlüssen. Ich bleibe als Sparringspartner dran.</p></li>
+    </ol>
+    <div class="layers" aria-hidden="true"><span>Unter der Oberfläche</span><span>Im Verhalten</span><span>Im Ergebnis</span></div>
+  </div>
+</section>
+
+<section class="sec">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Was sich verändert</div>
+      <h2>Was in deinem Vertrieb anders wird</h2>
+    </div>
+    <div class="outcomes">
+      <div class="oc"><small>Akquise</small><h3>Neukunden ohne Bauchweh</h3><p>Akquise wird zur festen Routine. Dein Team greift zum Telefon, weil es weiß, was es zu sagen hat.</p></div>
+      <div class="oc"><small>Abschluss</small><h3>Angebote werden zu Aufträgen</h3><p>Nachfassen ist selbstverständlich, und Gespräche enden mit einer klaren Vereinbarung.</p></div>
+      <div class="oc"><small>Marge</small><h3>Preise halten</h3><p>Rabatte werden zur Ausnahme, weil dein Team den Wert eurer Leistung überzeugend vermittelt.</p></div>
+      <div class="oc"><small>Führung</small><h3>Die Vertriebsleitung führt</h3><p>Ziele, Coaching und Feedback ersetzen das Einspringen bei jedem schwierigen Kunden.</p></div>
+      <div class="oc"><small>Unternehmer</small><h3>Du wirst entlastet</h3><p>Nicht mehr jeder große Abschluss braucht dich. Du hast Zeit für Strategie und Schlüsselkunden.</p></div>
+      <div class="oc"><small>Kultur</small><h3>Verkaufen macht wieder Freude</h3><p>Dein Team verkauft mit Stolz auf die eigene Leistung, und Kunden spüren das.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec mist" id="angebote">
+  <div class="wrap">
+    <div class="head">
+      <div class="eyebrow">Angebote</div>
+      <h2>Die passenden Bausteine für deinen Vertrieb</h2>
+      <p>Welche Bausteine sinnvoll sind, klären wir im Erstgespräch. Hier ein Überblick, was ich gemeinsam mit LeadingX anbiete.</p>
+    </div>
+    <div class="offers">
+      <article class="offer start"><span class="for">Einstieg · kostenlos</span><h3>Erstgespräch &amp; Entwicklungs-Strategie</h3><p>Wir analysieren, wo dein Vertrieb steht, was ihn bremst und welcher nächste Schritt den größten Hebel hat.</p></article>
+      <article class="offer"><span class="for">Für Vertriebsteams</span><h3>Sales Master Xacademy</h3><p>Das Entwicklungsprogramm für Verkäufer: Haltung, Gesprächsführung, Abschluss und Nachfassen, mit Umsetzung im Alltag.</p></article>
+      <article class="offer"><span class="for">Für Vertriebsleitungen</span><h3>Leading Sales Team Xacademy</h3><p>Vom besten Verkäufer zur Führungskraft, die ein Vertriebsteam zu Höchstleistung bringt.</p></article>
+      <article class="offer"><span class="for">Seminar</span><h3>V-Navi</h3><p>Verkaufen, Verhandeln, Vereinbaren, Verdienen: das kompakte Training für Preisgespräche und Verhandlungen.</p></article>
+      <article class="offer"><span class="for">Intensivseminar</span><h3>LeadingX10 · Passion for Selling and Service</h3><p>Das LeadingX-Flaggschiff mit Vertriebsfokus: Einstellung erleben, verändern und in den Verkauf übertragen.</p></article>
+      <article class="offer"><span class="for">Für Unternehmer</span><h3>Sparring &amp; Inhouse-Workshops</h3><p>Persönliche Begleitung für Geschäftsführer und maßgeschneiderte Workshops für dein Team, bei dir im Haus.</p></article>
+    </div>
+  </div>
+</section>
+
+<section class="sec" id="ueber-mich">
+  <div class="wrap about">
+    <div class="side">
+    <img class="about-img" src="img/christian-auer-business.webp" alt="Christian Auer mit verschränkten Armen vor einer hellen Steinfassade" width="1600" height="1066">
+    <div class="card">
+      <b>Ing. Christian Auer, M.A. LL.M.</b>
+      <span>Xperte für Verkauf &amp; Leadership im Wandel</span>
+      <ul>
+        <li>Trainer und Sparringspartner bei LeadingX, dem Institut für Einstellung und bewusste Führung</li>
+        <li>Schwerpunkt: Vertrieb, Akquise und Führung von Vertriebsteams</li>
+        <li>Initiator von SailingX: Leadership- und Teamentwicklung auf dem Segelboot</li>
+      </ul>
+    </div>
+    </div>
+    <div class="txt">
+      <div class="eyebrow">Wer hinter dem Angebot steht</div>
+      <h2>Ich verbinde Technik, Recht und Verkauf mit der Frage, was Menschen wirklich antreibt</h2>
+      <p>Als Ingenieur denke ich in Systemen und Prozessen. Mein Wirtschafts- und Rechtsstudium hat mir gezeigt, wie Verträge, Verhandlungen und Entscheidungen zustande kommen. Im Vertrieb habe ich gelernt, dass am Ende nicht das beste Argument gewinnt, sondern die richtige Haltung im Gespräch.</p>
+      <p>Bei LeadingX arbeite ich mit dem Ansatz, der seit 35 Jahren in über 300 Organisationen wirkt: <strong>Einstellung steuert Verhalten.</strong> Ich übertrage ihn auf den Vertrieb, wo er sich direkt in Umsatz, Marge und Abschlussquote zeigt.</p>
+      <p class="quote">„Ich höre zuerst zu, was bei dir los ist, und schaue dann, wo ich helfen kann.“</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec mist" id="bewertungen">
+  <div class="wrap reviews">
+    <div class="head">
+      <div class="eyebrow">Das sagen meine Kunden</div>
+      <h2>Bewertet von Menschen, mit denen ich gearbeitet habe</h2>
+      <p>Meine Kundenbewertungen sammle ich unabhängig und geprüft auf ProvenExpert. So siehst du ungefiltert, wie andere die Zusammenarbeit erlebt haben.</p>
+    </div>
+    <div class="pe-box">
+      <!-- ProvenExpert Bewertungssiegel -->
+      <div id="pewl"></div>
+      <script type="text/javascript" src="https://www.provenexpert.com/widget/landing_christianauer.js?feedback=0&avatar=1&competence=1&language=de-de&style=black" async></script>
+      <link rel="stylesheet" type="text/css" href="https://www.provenexpert.com/css/widget_landing.css" media="screen,print">
+      <!-- ProvenExpert Bewertungssiegel Ende -->
+      <a class="pe-link" href="https://www.provenexpert.com/christianauer/" target="_blank" rel="noopener">Alle Bewertungen auf ProvenExpert ansehen
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark" id="erstgespraech">
+  <div class="wrap talk">
+    <div style="display:grid;gap:18px">
+      <div class="eyebrow">Dein erster Schritt</div>
+      <h2>Überzeuge dich selbst. Ganz unverbindlich.</h2>
+      <p>Im Erstgespräch schauen wir gemeinsam, wo dein Vertrieb gerade steht. Daraus stelle ich die Bausteine zusammen, die zu deiner Situation passen, vom Training bis zur Begleitung in der Umsetzung. Das Gespräch ist kostenlos und unverbindlich.</p>
+      <div class="contact">
+        <div class="row"><span>E-Mail:</span> <code id="mail">christian.auer@leadingx.at</code> <button class="copy" type="button" data-copy="mail">Kopieren</button></div>
+        <div class="row"><span>Web:</span> <code>christianauer.at</code></div>
+      </div>
+      <div class="cta-row" style="margin-top:6px"><a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt Erstgespräch über das Kontaktformular anfragen</a></div>
+    </div>
+    <div style="display:grid;gap:16px">
+      <h3>Darüber sprechen wir:</h3>
+      <ol class="agenda">
+        <li><b>1</b><span style="color:var(--navy)">Wo dein Vertrieb heute steht und was dich am meisten Umsatz kostet</span></li>
+        <li><b>2</b><span style="color:var(--navy)">Welche Muster dich und dein Team im Verkauf bremsen</span></li>
+        <li><b>3</b><span style="color:var(--navy)">Wo Marge und Abschlüsse verloren gehen</span></li>
+        <li><b>4</b><span style="color:var(--navy)">Welche Bausteine sinnvoll sind und wie ich dich in der Umsetzung begleite</span></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="sec mist">
+  <div class="wrap narrow">
+    <div class="head">
+      <div class="eyebrow">Häufige Fragen</div>
+      <h2>Was du wissen solltest</h2>
+    </div>
+    <div class="faq">
+      <details><summary>Für wen ist das Angebot gedacht?</summary><p>Für Geschäftsführer, Inhaber und Vertriebsleitungen in B2B-Unternehmen, die mehr Abschlüsse wollen, ohne dass der Vertrieb weiter an ihnen selbst hängt.</p></details>
+      <details><summary>Was ist anders als bei klassischen Verkaufstrainings?</summary><p>Klassische Trainings vermitteln Techniken. Ich arbeite zusätzlich an der Einstellung, aus der dein Team verkauft, und begleite die Umsetzung, bis sie im Alltag hält. Deshalb verpufft die Wirkung nicht nach zwei Wochen.</p></details>
+      <details><summary>Arbeitest du mit Einzelpersonen oder ganzen Teams?</summary><p>Beides. Vom persönlichen Sparring für Geschäftsführer über Programme für Vertriebsleitungen bis zum Inhouse-Training für das gesamte Vertriebsteam.</p></details>
+      <details><summary>Was passiert nach dem Training?</summary><p>Dann beginnt die eigentliche Arbeit. Ich begleite dich und dein Team proaktiv in der Umsetzung und bin Sparringspartner bei schwierigen Kunden, Verhandlungen und Führungsfragen.</p></details>
+      <details><summary>Was kostet das?</summary><p>Das hängt davon ab, welche Bausteine du brauchst. Im Erstgespräch bekommst du einen klaren Vorschlag, bevor du dich für irgendetwas entscheidest.</p></details>
+      <details><summary>Wo findet das statt?</summary><p>In Österreich und Bayern bei dir im Unternehmen, in ausgewählten Seminarhotels oder online.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="sec dark final">
+  <div class="wrap">
+    <div class="eyebrow">Genug vom Verkaufen unter Druck?</div>
+    <blockquote>Ich löse die Vertriebsprobleme, die Umsatz und Wachstum ausbremsen. Das Ergebnis: mehr Abschlüsse, ohne mehr Druck.</blockquote>
+    <a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt unverbindliches Erstgespräch buchen</a>
+  </div>
+</section>
+</main>
+
+<footer class="foot">
+  <div class="wrap">
+    <span>© 2026 Christian Auer · christianauer.at</span>
+    <nav aria-label="Rechtliches"><a href="#impressum">Impressum</a><a href="#datenschutz">Datenschutz</a><a href="https://www.leadingx.com/" target="_blank" rel="noopener">LeadingX</a></nav>
+    <p class="disc">Erfahrungswerte und Kennzahlen stammen von LeadingX und beruhen auf Erfahrungen einzelner Kunden. Sie sind keine Garantie für gleiche Ergebnisse.</p>
+  </div>
+</footer>
+
+<script>
+document.querySelectorAll('.copy').forEach(function(b){
+  b.addEventListener('click',function(){
+    var el=document.getElementById(b.dataset.copy);var t=el.textContent;
+    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
+    try{navigator.clipboard.writeText(t).then(function(){b.textContent='Kopiert';setTimeout(function(){b.textContent='Kopieren'},1600)},sel);}catch(e){sel();}
+  });
+});
+</script>
+</body>
+</html>
