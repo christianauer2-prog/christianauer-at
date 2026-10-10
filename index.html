@@ -177,6 +177,14 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .offer.start{border:2px solid var(--cta-b);box-shadow:var(--shadow)}
 .offer.start .for{color:var(--cta-b)}
 
+.offer{position:relative;transition:border-color .15s ease,transform .15s ease,box-shadow .15s ease}
+.offer:hover{border-color:var(--blue);transform:translateY(-2px);box-shadow:var(--shadow)}
+.offer h3 a{color:inherit;text-decoration:none}
+.offer h3 a::after{content:"";position:absolute;inset:0;border-radius:inherit}
+.offer h3 a:focus-visible{outline:none}
+.offer:focus-within{outline:3px solid var(--cta-b);outline-offset:3px}
+.offer .more{margin-top:4px;display:inline-flex;align-items:center;gap:6px;font-size:.9rem;font-weight:700;color:var(--blue)}
+.offer.start .more{color:var(--cta-b)}
 /* Über mich */
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,60px);align-items:start}
 @media (max-width:860px){.about{grid-template-columns:1fr}}
@@ -447,12 +455,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <p>Welche Bausteine sinnvoll sind, klären wir im Erstgespräch. Hier ein Überblick, was ich gemeinsam mit LeadingX anbiete.</p>
     </div>
     <div class="offers">
-      <article class="offer start"><span class="for">Einstieg · kostenlos</span><h3>Erstgespräch &amp; Entwicklungs-Strategie</h3><p>Wir analysieren, wo dein Vertrieb steht, was ihn bremst und welcher nächste Schritt den größten Hebel hat.</p></article>
-      <article class="offer"><span class="for">Für Vertriebsteams</span><h3>Sales Master Xacademy</h3><p>Das Entwicklungsprogramm für Verkäufer: Haltung, Gesprächsführung, Abschluss und Nachfassen, mit Umsetzung im Alltag.</p></article>
-      <article class="offer"><span class="for">Für Vertriebsleitungen</span><h3>Leading Sales Team Xacademy</h3><p>Vom besten Verkäufer zur Führungskraft, die ein Vertriebsteam zu Höchstleistung bringt.</p></article>
-      <article class="offer"><span class="for">Seminar</span><h3>V-Navi</h3><p>Verkaufen, Verhandeln, Vereinbaren, Verdienen: das kompakte Training für Preisgespräche und Verhandlungen.</p></article>
-      <article class="offer"><span class="for">Intensivseminar</span><h3>LeadingX10 · Passion for Selling and Service</h3><p>Das LeadingX-Flaggschiff mit Vertriebsfokus: Einstellung erleben, verändern und in den Verkauf übertragen.</p></article>
-      <article class="offer"><span class="for">Für Unternehmer</span><h3>Sparring &amp; Inhouse-Workshops</h3><p>Persönliche Begleitung für Geschäftsführer und maßgeschneiderte Workshops für dein Team, bei dir im Haus.</p></article>
+      <article class="offer start"><span class="for">Einstieg · kostenlos</span><h3><a href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Erstgespräch &amp; Entwicklungs-Strategie</a></h3><p>Wir analysieren, wo dein Vertrieb steht, was ihn bremst und welcher nächste Schritt den größten Hebel hat.</p><span class="more">Erstgespräch anfragen →</span></article>
+      <article class="offer"><span class="for">Für Vertriebsteams</span><h3><a href="https://www.leadingx.com/leistungen/xacademy/sales-master-academy-2/" target="_blank" rel="noopener">Sales Master Xacademy</a></h3><p>Das Entwicklungsprogramm für Verkäufer: Haltung, Gesprächsführung, Abschluss und Nachfassen, mit Umsetzung im Alltag.</p><span class="more">Mehr auf leadingx.com →</span></article>
+      <article class="offer"><span class="for">Für Vertriebsleitungen</span><h3><a href="https://www.leadingx.com/leistungen/xacademy/leading-sales-team/" target="_blank" rel="noopener">Leading Sales Team Xacademy</a></h3><p>Vom besten Verkäufer zur Führungskraft, die ein Vertriebsteam zu Höchstleistung bringt.</p><span class="more">Mehr auf leadingx.com →</span></article>
+      <article class="offer"><span class="for">Seminar</span><h3><a href="https://www.leadingx.com/kompetenzen/kooperation-team-verkauf/v-navi/" target="_blank" rel="noopener">V-Navi</a></h3><p>Verkaufen, Verhandeln, Vereinbaren, Verdienen: das kompakte Training für Preisgespräche und Verhandlungen.</p><span class="more">Mehr auf leadingx.com →</span></article>
+      <article class="offer"><span class="for">Intensivseminar</span><h3><a href="https://www.leadingx.com/seminare/seminar-leadingx10-passion-for-selling-and-service/" target="_blank" rel="noopener">LeadingX10 · Passion for Selling and Service</a></h3><p>Das LeadingX-Flaggschiff mit Vertriebsfokus: Einstellung erleben, verändern und in den Verkauf übertragen.</p><span class="more">Mehr auf leadingx.com →</span></article>
+      <article class="offer"><span class="for">Für Unternehmer</span><h3><a href="https://www.leadingx.com/leistungen/coaching/" target="_blank" rel="noopener">Sparring &amp; Inhouse-Workshops</a></h3><p>Persönliche Begleitung für Geschäftsführer und maßgeschneiderte Workshops für dein Team, bei dir im Haus.</p><span class="more">Mehr auf leadingx.com →</span></article>
     </div>
   </div>
 </section>
