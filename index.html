@@ -28,7 +28,7 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.65 var(--font);-webkit-font-smoothing:antialiased}
 h1,h2,h3{color:var(--navy);line-height:1.18;text-wrap:balance;margin:0}
-h1{font-size:clamp(2rem,4.6vw,3.35rem);font-weight:800;letter-spacing:-.02em}
+h1{font-size:clamp(1.85rem,4.2vw,2.9rem);font-weight:800;letter-spacing:-.02em}
 h2{font-size:clamp(1.6rem,3.2vw,2.35rem);font-weight:750;letter-spacing:-.015em}
 h3{font-size:1.18rem;font-weight:700}
 p{margin:0}
@@ -37,8 +37,8 @@ a{color:var(--blue)}
 a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--cta-b);outline-offset:3px;border-radius:6px}
 .wrap{max-width:1140px;margin:0 auto;padding-inline:20px}
 .narrow{max-width:760px}
-.eyebrow{display:flex;align-items:center;gap:12px;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
-.eyebrow::before{content:"";width:28px;height:3px;border-radius:2px;background:var(--cta-b)}
+.eyebrow{display:flex;align-items:flex-start;gap:12px;font-size:.8rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--blue)}
+.eyebrow::before{content:"";flex:none;margin-top:.62em;width:28px;height:3px;border-radius:2px;background:var(--cta-b)}
 .dark .eyebrow{color:var(--cta-a)}
 .sec{padding-block:clamp(64px,9vw,112px)}
 .mist{background:var(--mist)}
@@ -49,7 +49,9 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .btn{display:inline-flex;align-items:center;gap:10px;padding:16px 26px;border-radius:12px;background:linear-gradient(135deg,var(--cta-a),var(--cta-b));color:var(--deep);font-weight:800;font-size:1.02rem;text-decoration:none;box-shadow:0 10px 24px -10px rgba(247,147,30,.7);transition:transform .15s ease,box-shadow .15s ease}
 .btn:hover{transform:translateY(-2px);box-shadow:0 14px 30px -10px rgba(247,147,30,.85)}
 .btn svg{width:18px;height:18px}
-.btn-sm{padding:10px 16px;font-size:.88rem;border-radius:10px}
+.btn-sm{padding:10px 16px;font-size:.88rem;border-radius:10px;white-space:nowrap}
+.btn-sm .short{display:none}
+@media (max-width:420px){.btn-sm{padding:9px 13px;font-size:.84rem}.btn-sm .long{display:none}.btn-sm .short{display:inline}}
 .cta-row{display:flex;flex-wrap:wrap;align-items:center;gap:14px 22px;margin-top:30px}
 .cta-note{font-size:.9rem;color:var(--muted)}
 
@@ -85,7 +87,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .proof-dots i:nth-child(3){background:var(--cta-b)}
 
 .hero-side{position:relative;min-width:0}
-.seal{position:absolute;z-index:2;left:-56px;bottom:96px;line-height:0;filter:drop-shadow(0 10px 18px rgba(8,47,76,.22))}
+.seal{position:absolute;z-index:2;left:-56px;top:28px;line-height:0;filter:drop-shadow(0 10px 18px rgba(8,47,76,.22))}
 .seal:empty,.seal span:empty{display:contents}
 @media (max-width:900px){.seal{left:auto;right:12px;bottom:auto;top:12px;transform:scale(.8);transform-origin:top right}}
 .portrait{background:var(--white);border-radius:22px;box-shadow:var(--shadow);border:1px solid var(--line);overflow:hidden}
@@ -190,7 +192,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .about{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,60px);align-items:start}
 @media (max-width:860px){.about{grid-template-columns:1fr}}
 .about .side{display:grid;min-width:0}
-.about-img{display:block;width:100%;max-width:100%;aspect-ratio:4/3.4;object-fit:cover;object-position:62% 30%;border-radius:20px 20px 0 0}
+.about-img{display:block;width:100%;max-width:100%;height:auto;aspect-ratio:4/3.4;object-fit:cover;object-position:62% 30%;border-radius:20px 20px 0 0}
 .about .card{border-radius:0 0 20px 20px;background:var(--navy);color:var(--on-dark);padding:30px;display:grid;gap:14px}
 .about .card .initials{width:84px;height:84px;border-radius:50%;background:var(--white);color:var(--navy);display:grid;place-items:center;font-size:1.8rem;font-weight:800}
 .about .card b{color:var(--white);font-size:1.25rem}
@@ -272,7 +274,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <a class="l" href="#system">Vorgehen</a>
       <a class="l" href="#angebote">Angebote</a>
       <a class="l" href="#ueber-mich">Über mich</a>
-      <a class="btn btn-sm" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Erstgespräch buchen</a>
+      <a class="btn btn-sm" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener"><span class="long">Erstgespräch buchen</span><span class="short">Erstgespräch</span></a>
     </nav>
   </div>
 </header>
@@ -355,7 +357,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 </section>
 
 
-<section class="sec mist" id="probleme">
+<section class="sec" id="probleme">
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">Probleme &amp; Lösungen</div>
@@ -392,7 +394,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </section>
 
-<section class="sec">
+<section class="sec mist">
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">Was du davon hast</div>
@@ -420,7 +422,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </section>
 
-<section class="sec mist" id="system">
+<section class="sec" id="system">
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">Das Vorgehen im Überblick</div>
@@ -438,7 +440,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </section>
 
-<section class="sec">
+<section class="sec mist">
   <div class="wrap">
     <div class="head">
       <div class="eyebrow">Was sich verändert</div>
