@@ -111,7 +111,8 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .notalone b{font-size:2rem;color:var(--cta-a);line-height:1;flex:none}
 
 /* Trust band */
-.trust{background:var(--navy);color:var(--on-dark);padding-block:44px}
+.trust{background:var(--navy);color:var(--on-dark);padding-block:clamp(48px,7vw,72px)}
+.trust-h{color:var(--white);margin-bottom:32px}
 .stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
 @media (max-width:760px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .stat b{display:block;font-size:clamp(1.8rem,3.4vw,2.4rem);font-weight:800;color:var(--white);line-height:1.1;font-variant-numeric:tabular-nums}
@@ -353,18 +354,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </section>
 
-<section class="trust" aria-label="Erfahrung">
-  <div class="wrap">
-    <div class="stats">
-      <div class="stat"><b>35 Jahre</b><span>Erfahrung in Führung und Einstellung</span></div>
-      <div class="stat"><b>5.000+</b><span>Seminare, Workshops und Coachings</span></div>
-      <div class="stat"><b>300+</b><span>Organisationen, vom Mittelstand bis zum Konzern</span></div>
-      <div class="stat"><b>1</b><span>Sparringspartner, der bis zur Umsetzung bleibt</span></div>
-    </div>
-    <div class="logos"><em>LeadingX vertrauen unter anderem</em> Beiersdorf <span>Sparkasse</span> <span>Raiffeisen</span> <span>BMW</span> <span>Siemens</span> <span>Swarovski</span> <span>Red Bull Media House</span></div>
-    <p class="src">Zahlen und Referenzen: LeadingX – Institut für Einstellung und bewusste Führung, mein Trainings-Institut.</p>
-  </div>
-</section>
 
 <section class="sec mist" id="probleme">
   <div class="wrap">
@@ -466,6 +455,20 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </section>
 
+<section class="trust" aria-label="Erfahrung">
+  <div class="wrap">
+    <h2 class="trust-h">Was du über LeadingX wissen solltest</h2>
+    <div class="stats">
+      <div class="stat"><b>35 Jahre</b><span>Erfahrung in Führung und Einstellung</span></div>
+      <div class="stat"><b>5.000+</b><span>Seminare, Workshops und Coachings</span></div>
+      <div class="stat"><b>300+</b><span>Organisationen, vom Mittelstand bis zum Konzern</span></div>
+      <div class="stat"><b>1</b><span>Sparringspartner, der bis zur Umsetzung bleibt</span></div>
+    </div>
+    <div class="logos"><em>LeadingX vertrauen unter anderem</em> Beiersdorf <span>Sparkasse</span> <span>Raiffeisen</span> <span>BMW</span> <span>Siemens</span> <span>Swarovski</span> <span>Red Bull Media House</span></div>
+    <p class="src">Zahlen und Referenzen: LeadingX – Institut für Einstellung und bewusste Führung, mein Trainings-Institut.</p>
+  </div>
+</section>
+
 <section class="sec mist" id="angebote">
   <div class="wrap">
     <div class="head">
@@ -531,7 +534,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
     </div>
   </div>
 </section>
-
 
 <section class="sec dark" id="erstgespraech">
   <div class="wrap talk">
