@@ -546,11 +546,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
       <div class="eyebrow">Dein erster Schritt</div>
       <h2>Überzeuge dich selbst. Ganz unverbindlich.</h2>
       <p>Im Erstgespräch schauen wir gemeinsam, wo dein Vertrieb gerade steht. Daraus stelle ich die Bausteine zusammen, die zu deiner Situation passen, vom Training bis zur Begleitung in der Umsetzung. Das Gespräch ist kostenlos und unverbindlich.</p>
-      <div class="contact">
-        <div class="row"><span>E-Mail:</span> <code id="mail">christian.auer@leadingx.at</code> <button class="copy" type="button" data-copy="mail">Kopieren</button></div>
-        <div class="row"><span>Telefon:</span> <a href="tel:+436703530027" style="color:var(--white);text-decoration:none"><code id="tel" style="color:var(--white)">+43 670 353 00 27</code></a> <button class="copy" type="button" data-copy="tel">Kopieren</button></div>
-        <div class="row"><span>Web:</span> <code>christianauer.at</code></div>
-      </div>
       <div class="cta-row" style="margin-top:6px"><a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt Erstgespräch über das Kontaktformular anfragen</a></div>
     </div>
     <div style="display:grid;gap:16px">
@@ -599,14 +594,6 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   </div>
 </footer>
 
-<script>
-document.querySelectorAll('.copy').forEach(function(b){
-  b.addEventListener('click',function(){
-    var el=document.getElementById(b.dataset.copy);var t=el.textContent;
-    function sel(){var r=document.createRange();r.selectNodeContents(el);var s=getSelection();s.removeAllRanges();s.addRange(r);}
-    try{navigator.clipboard.writeText(t).then(function(){b.textContent='Kopiert';setTimeout(function(){b.textContent='Kopieren'},1600)},sel);}catch(e){sel();}
-  });
-});
-</script>
+
 </body>
 </html>
