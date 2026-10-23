@@ -74,7 +74,7 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 /* Hero */
 .hero{position:relative;overflow:hidden;background:linear-gradient(180deg,var(--white) 0%,var(--white) 55%,var(--mist) 100%);padding-block:clamp(48px,7vw,88px) clamp(56px,8vw,96px)}
 .hero::before{content:"X";position:absolute;right:-4vw;top:-6vw;font-weight:900;font-size:clamp(380px,52vw,760px);line-height:.8;color:var(--navy);opacity:.035;pointer-events:none}
-.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(32px,5vw,64px);align-items:center}
+.hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(32px,5vw,64px);align-items:start}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
 .hero-head{position:relative;display:grid;justify-items:center;text-align:center;gap:18px;max-width:1040px;margin-bottom:clamp(36px,5vw,56px)}
 .hero-head .eyebrow{justify-content:center;text-align:left}
@@ -83,6 +83,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 @media (max-width:600px){.hero-head{justify-items:start;text-align:left}.hero-head .eyebrow{justify-content:flex-start}}
 .hero .result{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:650;color:var(--blue);line-height:1.3}
 .hero .lead{font-size:1.1rem;max-width:62ch}
+.benefits{list-style:none;margin:26px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+@media (max-width:600px){.benefits{grid-template-columns:1fr}}
+.benefits li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:12px;align-items:start;padding:16px 18px;background:var(--white);border:1px solid var(--line);border-radius:14px}
+.benefits .ck{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;background:rgba(14,159,122,.12);color:var(--green)}
+.benefits .ck svg{width:16px;height:16px}
+.benefits b{display:block;color:var(--navy);line-height:1.3;margin-bottom:3px}
+.benefits li span:last-child{font-size:.94rem;line-height:1.5}
 .proof{display:flex;align-items:center;gap:14px;margin-top:30px;font-size:.92rem}
 .proof-dots{display:flex}
 .proof-dots i{width:34px;height:34px;border-radius:50%;border:2px solid var(--white);margin-left:-8px;display:grid;place-items:center;font-style:normal;font-size:.7rem;font-weight:800;color:var(--white)}
@@ -293,6 +300,12 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
   <div class="wrap hero-grid">
     <div>
       <p class="lead">Der Auftragseingang hängt gefühlt oder auch real nur von deiner Person ab? <strong>Ich zeige dir und deinem Vertriebsteam, welche unbewussten Muster euch im Verkauf bremsen</strong>, wie ihr Preisverhandlungen souverän führt und wie Akquise wieder zur Freude wird. Dadurch erhaltet ihr nicht nur mehr Kunden, sondern auch bessere Kunden. Nach den Trainings begleite ich dich auf Wunsch als Sparringspartner, bis sich das Erlernte erfolgreich in deinen Zahlen abbildet.</p>
+      <ul class="benefits" aria-label="Was du davon hast">
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Mehr und bessere Kunden</b>Eine Pipeline, die sich regelmäßig mit passenden Anfragen füllt.</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Souveräne Preisverhandlungen</b>Ihr vertretet euren Wert, statt Rabatte zu geben, und haltet eure Marge.</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Akquise mit Freude</b>Kundengewinnung wird zur Routine statt zur Überwindung.</span></li>
+        <li><span class="ck"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg></span><span><b>Weniger Abhängigkeit von dir</b>Dein Team holt Aufträge selbstständig, du gewinnst Zeit und Freiheit.</span></li>
+      </ul>
       <div class="cta-row">
         <a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt unverbindliches Erstgespräch buchen
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
