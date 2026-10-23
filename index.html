@@ -28,7 +28,7 @@ html{scroll-behavior:smooth}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 body{margin:0;background:var(--white);color:var(--ink);font:400 17px/1.65 var(--font);-webkit-font-smoothing:antialiased}
 h1,h2,h3{color:var(--navy);line-height:1.18;text-wrap:balance;margin:0}
-h1{font-size:clamp(1.85rem,4.2vw,2.9rem);font-weight:800;letter-spacing:-.02em}
+h1{font-size:clamp(1.85rem,4.4vw,3.2rem);font-weight:800;letter-spacing:-.02em}
 h2{font-size:clamp(1.6rem,3.2vw,2.35rem);font-weight:750;letter-spacing:-.015em}
 h3{font-size:1.18rem;font-weight:700}
 p{margin:0}
@@ -76,9 +76,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 .hero::before{content:"X";position:absolute;right:-4vw;top:-6vw;font-weight:900;font-size:clamp(380px,52vw,760px);line-height:.8;color:var(--navy);opacity:.035;pointer-events:none}
 .hero-grid{position:relative;display:grid;grid-template-columns:minmax(0,1.35fr) minmax(0,.85fr);gap:clamp(32px,5vw,64px);align-items:center}
 @media (max-width:900px){.hero-grid{grid-template-columns:1fr}}
-.hero h1{margin-top:18px}
-.hero .result{margin-top:14px;font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:650;color:var(--blue);line-height:1.3}
-.hero .lead{margin-top:22px;font-size:1.1rem;max-width:62ch}
+.hero-head{position:relative;display:grid;justify-items:center;text-align:center;gap:18px;max-width:1040px;margin-bottom:clamp(36px,5vw,56px)}
+.hero-head .eyebrow{justify-content:center;text-align:left}
+.hero-head h1{max-width:22ch}
+.hero-head .result{max-width:46ch;text-wrap:balance}
+@media (max-width:600px){.hero-head{justify-items:start;text-align:left}.hero-head .eyebrow{justify-content:flex-start}}
+.hero .result{font-size:clamp(1.15rem,2.2vw,1.5rem);font-weight:650;color:var(--blue);line-height:1.3}
+.hero .lead{font-size:1.1rem;max-width:62ch}
 .proof{display:flex;align-items:center;gap:14px;margin-top:30px;font-size:.92rem}
 .proof-dots{display:flex}
 .proof-dots i{width:34px;height:34px;border-radius:50%;border:2px solid var(--white);margin-left:-8px;display:grid;place-items:center;font-style:normal;font-size:.7rem;font-weight:800;color:var(--white)}
@@ -281,11 +285,13 @@ a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var
 
 <main id="start">
 <section class="hero">
+  <div class="wrap hero-head">
+    <div class="eyebrow">Für Geschäftsführer*innen, Gründer*innen, Selbstständige und Vertriebsverantwortliche</div>
+    <h1>Ich löse die Vertriebsprobleme, die deine Umsatzsteigerung und dein Wachstum aktuell ausbremsen.</h1>
+    <p class="result">Das Ergebnis: mehr Aufträge, weniger Druck, mehr Freiheiten…somit wieder mehr Freude an deinem Business.</p>
+  </div>
   <div class="wrap hero-grid">
     <div>
-      <div class="eyebrow">Für Geschäftsführer*innen, Gründer*innen, Selbstständige und Vertriebsverantwortliche</div>
-      <h1>Ich löse die Vertriebsprobleme, die deine Umsatzsteigerung und dein Wachstum aktuell ausbremsen.</h1>
-      <p class="result">Das Ergebnis: mehr Aufträge, weniger Druck, mehr Freiheiten…somit wieder mehr Freude an deinem Business.</p>
       <p class="lead">Der Auftragseingang hängt gefühlt oder auch real nur von deiner Person ab? <strong>Ich zeige dir und deinem Vertriebsteam, welche unbewussten Muster euch im Verkauf bremsen</strong>, wie ihr Preisverhandlungen souverän führt und wie Akquise wieder zur Freude wird. Dadurch erhaltet ihr nicht nur mehr Kunden, sondern auch bessere Kunden. Nach den Trainings begleite ich dich auf Wunsch als Sparringspartner, bis sich das Erlernte erfolgreich in deinen Zahlen abbildet.</p>
       <div class="cta-row">
         <a class="btn" href="https://www.leadingx.com/kontakt/#kontaktformular" target="_blank" rel="noopener">Jetzt unverbindliches Erstgespräch buchen
